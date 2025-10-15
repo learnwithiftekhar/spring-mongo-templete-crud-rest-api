@@ -13,13 +13,13 @@ This repository is the source code for the YouTube tutorial: **[Spring Boot REST
 
 ## ✨ Features
 
-- 🔧 **Complete CRUD Operations**: Create, Read, Update, and Delete users
-- ✅ **Data Validation**: Bean validation with custom error messages
-- 🔍 **Unique Email Constraint**: Prevents duplicate email registrations
-- 🏗️ **Clean Architecture**: Service layer pattern implementation
-- 📊 **MongoDB Integration**: Uses MongoTemplate for flexible database operations
-- 🚀 **RESTful API Design**: Follows REST principles with proper HTTP status codes
-- 📝 **Comprehensive Documentation**: Well-documented code with clear examples
+-  **Complete CRUD Operations**: Create, Read, Update, and Delete users
+-  **Data Validation**: Bean validation with custom error messages
+-  **Unique Email Constraint**: Prevents duplicate email registrations
+- ️ **Clean Architecture**: Service layer pattern implementation
+-  **MongoDB Integration**: Uses MongoTemplate for flexible database operations
+-  **RESTful API Design**: Follows REST principles with proper HTTP status codes
+-  **Comprehensive Documentation**: Well-documented code with clear examples
 
 ## 🛠️ Technology Stack
 
@@ -218,12 +218,12 @@ src/
 
 ## 🎯 Key Learning Points
 
-- 📚 **MongoTemplate Usage**: Direct MongoDB operations without JPA
-- 🔒 **Data Validation**: Using Bean Validation annotations
-- 🏛️ **Service Layer Pattern**: Separation of concerns
-- 🌐 **REST API Design**: Proper HTTP methods and status codes
-- 🔧 **Spring Boot Configuration**: YAML-based configuration
-- 📊 **MongoDB Integration**: Document-based database operations
+-  **MongoTemplate Usage**: Direct MongoDB operations without JPA
+-  **Data Validation**: Using Bean Validation annotations
+- ️ **Service Layer Pattern**: Separation of concerns
+-  **REST API Design**: Proper HTTP methods and status codes
+-  **Spring Boot Configuration**: YAML-based configuration
+-  **MongoDB Integration**: Document-based database operations
 
 ## 🤝 Contributing
 
