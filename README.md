@@ -36,7 +36,7 @@ This repository is the source code for the YouTube tutorial: **[Spring Boot REST
 Before running this application, make sure you have:
 
 - ☕ **Java 21** or later installed
-- 🍃 **MongoDB** running on `localhost:27017`
+- 🍃 **MongoDB** running on `localhost:27017` (local installation) **OR** 🐳 **Docker** (for containerized MongoDB)
 - 🔨 **Maven 3.6+** for building the project
 - 🖥️ **IDE** like IntelliJ IDEA, Eclipse, or VS Code
 
@@ -51,6 +51,10 @@ cd spring-mongo-templete-crud-rest-api
 
 ### 2. Start MongoDB
 
+You have two options to run MongoDB:
+
+#### Option A: Local MongoDB Installation
+
 Make sure MongoDB is running on your local machine:
 
 ```bash
@@ -63,6 +67,34 @@ sudo systemctl start mongod
 # On Windows
 net start MongoDB
 ```
+
+#### Option B: Using Docker (Recommended) 🐳
+
+If you prefer to run MongoDB in a Docker container:
+
+```bash
+# Pull and run MongoDB container
+docker run --name mongodb \
+  -p 27017:27017 \
+  -d mongo:latest
+
+# Or with persistent data volume
+docker run --name mongodb \
+  -p 27017:27017 \
+  -v mongodb_data:/data/db \
+  -d mongo:latest
+
+# To stop the container
+docker stop mongodb
+
+# To start existing container
+docker start mongodb
+
+# To remove the container (optional)
+docker rm mongodb
+```
+
+**Note**: The Docker option requires Docker to be installed on your system.
 
 ### 3. Build and Run the Application
 
