@@ -1,5 +1,5 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/crud_tutorial
-      database: crud_tutorial
+      uri: ${MONGODB_URI:mongodb://localhost:27017/crud_tutorial}
+      database: ${MONGODB_DATABASE:crud_tutorial}

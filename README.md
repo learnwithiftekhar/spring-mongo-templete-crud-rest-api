@@ -186,14 +186,39 @@ curl -X DELETE http://localhost:8080/api/users/{userId}
 
 ## ⚙️ Configuration
 
-The application uses the following MongoDB configuration in `application.yml`:
+The application uses MongoDB configuration with environment variable support in `application.yml`:
 
 ```yaml
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/crud_tutorial
-      database: crud_tutorial
+      uri: ${MONGODB_URI:mongodb://localhost:27017/crud_tutorial}
+      database: ${MONGODB_DATABASE:crud_tutorial}
+```
+
+### Environment Variables
+
+You can customize the MongoDB connection by setting these environment variables:
+
+- **`MONGODB_URI`**: Complete MongoDB connection string (default: `mongodb://localhost:27017/crud_tutorial`)
+- **`MONGODB_DATABASE`**: Database name (default: `crud_tutorial`)
+
+#### Examples:
+
+**Using environment variables:**
+```bash
+# Set custom MongoDB URI and database
+export MONGODB_URI=mongodb://your-server:27017/your_database
+export MONGODB_DATABASE=your_database
+
+# Run the application
+mvn spring-boot:run
+```
+
+**Using Docker with environment variables:**
+```bash
+# Run with custom MongoDB settings
+mvn spring-boot:run -Dspring-boot.run.arguments="--MONGODB_URI=mongodb://mongodb-server:27017/mydb --MONGODB_DATABASE=mydb"
 ```
 
 ## 🏗️ Project Structure
